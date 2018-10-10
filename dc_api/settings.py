@@ -29,7 +29,7 @@ DEBUG = False
 
 ADMIN_ENABLED = True
 
-ALLOWED_HOSTS = ['http://donna-photography-api.herokuapp.com']
+ALLOWED_HOSTS = ['http://donna-photography-api.herokuapp.com/']
 
 
 # Application definition
