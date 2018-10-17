@@ -7,6 +7,7 @@ class ReviewSerializer(serializers.ModelSerializer):
                 'id',
                 'name',
                 'description',
+                'image',
                 'created_at',
         )
         model = Review
