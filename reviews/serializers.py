@@ -6,8 +6,7 @@ class ReviewSerializer(serializers.ModelSerializer):
         fields = (
                 'id',
                 'name',
-                'description',
-                'image',
+                'description'
                 'created_at',
         )
         model = Review
