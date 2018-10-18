@@ -69,9 +69,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = (
-    'https://sheltered-garden-79580.herokuapp.com/'
-)
 
 ROOT_URLCONF = 'dc_api.urls'
 
