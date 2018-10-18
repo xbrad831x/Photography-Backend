@@ -16,8 +16,10 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = "https://donna-photography-api.herokuapp.com"
 
-
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +33,7 @@ DEBUG = False
 
 ADMIN_ENABLED = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.herokuapp.com/']
 
 
 # Application definition
@@ -69,6 +71,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ORIGIN_WHITELIST = (
+    'https://sheltered-garden-79580.herokuapp.com/'
+)
 
 ROOT_URLCONF = 'dc_api.urls'
 
@@ -95,7 +100,7 @@ WSGI_APPLICATION = 'dc_api.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=500)
+    'default': dj_database_url.config(conn_max_age=500, ssl_require=True)
 }
 
 
