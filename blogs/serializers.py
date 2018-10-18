@@ -6,7 +6,6 @@ class BlogSerializer(serializers.ModelSerializer):
         fields = (
                 'id',
                 'title',
-                'gallery',
                 'image_url',
                 'description',
                 'created_at',
