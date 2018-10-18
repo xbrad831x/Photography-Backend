@@ -16,10 +16,8 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_URL = "https://donna-photography-api.herokuapp.com"
 
 SECURE_SSL_REDIRECT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,7 +31,7 @@ DEBUG = False
 
 ADMIN_ENABLED = True
 
-ALLOWED_HOSTS = ['.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
