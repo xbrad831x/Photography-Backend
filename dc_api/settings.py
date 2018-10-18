@@ -17,7 +17,7 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECURE_SSL_REDIRECT = True
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'dc_api.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=500, ssl_require=True)
+    'default': dj_database_url.config(conn_max_age=500)
 }
 
 
