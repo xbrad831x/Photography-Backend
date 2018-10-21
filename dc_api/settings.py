@@ -21,6 +21,7 @@ BASE_URL = "https://donna-photography-api.herokuapp.com"
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -32,7 +33,7 @@ DEBUG = False
 
 ADMIN_ENABLED = True
 
-
+ALLOWED_HOSTS = ['.herokuapp.com/']
 
 # Application definition
 
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'blogs',
+    'homepics',
     'galleries',
     'reviews',
 ]

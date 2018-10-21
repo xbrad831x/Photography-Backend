@@ -20,5 +20,6 @@ urlpatterns = [
     path('donna-c-admin-access/', admin.site.urls),
     path('api/blogs', include('blogs.urls')),
     path('api/reviews', include('reviews.urls')),
-    path('api/galleries', include('galleries.urls'))
+    path('api/galleries', include('galleries.urls')),
+    path('api/homepics', include('homepics.urls')),
 ]
