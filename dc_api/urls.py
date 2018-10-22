@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/reviews', include('reviews.urls')),
     path('api/galleries', include('galleries.urls')),
     path('api/homepics', include('homepics.urls')),
+    path('api/sendemail', include('sendemails.urls')),
 ]

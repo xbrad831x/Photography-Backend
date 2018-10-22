@@ -16,6 +16,7 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 BASE_URL = "https://donna-photography-api.herokuapp.com"
 
 SECURE_SSL_REDIRECT = True
@@ -29,7 +30,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECRET_KEY = '41)4(em59p=r$e_v$g=5cj4b=d5m@ul16*4_+)0x!+6mcye7jh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ADMIN_ENABLED = True
 
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'blogs',
+    'sendemails',
     'homepics',
     'galleries',
     'reviews',
@@ -144,3 +146,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 django_heroku.settings(locals())
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'testingadamnwebsite2018@gmail.com'
+EMAIL_HOST_PASSWORD = 'qaz98765'
